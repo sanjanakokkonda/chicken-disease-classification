@@ -9,3 +9,15 @@ class DataIngestionConfig:
     unzip_dir:Path
 
     #same as the return type..as the root directory we created in artifacts
+
+
+@dataclass(frozen=True)
+class PrepareBaseModelConfig:
+    root_dir: Path
+    base_model_path: Path
+    updated_base_model_path: Path
+    params_image_size: list
+    params_learning_rate: float
+    params_include_top: bool
+    params_weights: str
+    params_classes: int
